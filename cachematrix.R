@@ -5,8 +5,11 @@
 
 
 makeCacheMatrix <- function(x = matrix()) {
+        ## m will flag if we have stored the inverse in cache
+        ## default value is NULL
         m <- NULL
         set <- function(y) {
+                ## Use <<- to store in cache
                 x <<- y
                 m <<- NULL
         }
